@@ -39,5 +39,3 @@ launch.json
         }
     ]
 }
-# FinalProject_Stock
-
