@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>股票查詢結果</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2>參數設定</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="market">選擇市場:</label>
+                    <select id="market" name="market" class="form-control" required>
+                        <option value="台股">台股</option>
+                        <option value="美股">美股</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="stock_code">股票代碼:</label>
+                    <input type="text" id="stock_code" name="stock_code" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="start_date">開始日期:</label>
+                    <input type="date" id="start_date" name="start_date" class="form-control date-selector" required>
+                </div>
+                <div class="form-group">
+                    <label for="end_date">結束日期:</label>
+                    <input type="date" id="end_date" name="end_date" class="form-control date-selector" required>
+                </div>
+                <button type="submit" class="btn">查詢</button>
+            </form>
+        </aside>
+        <main class="content">
+            <h1>股票查詢結果</h1>
+            <p><b>股票代碼:</b> {{ stock_code }}</p>
+            <p><b>最新價格:</b> {{ latest_price }}</p>
+            <p><b>日漲跌幅:</b> {{ daily_change }}</p>
+            <p><b>日期範圍:</b> {{ start_date }} 至 {{ end_date }}</p>
+            <h2>Stock Plot</h2>
+            <img src="/static/stock_plot.png" alt="Stock Plot">
+        </main>
+    </div>
+</body>
+</html>
