@@ -39,3 +39,5 @@ launch.json
         }
     ]
 }
+
+python manage.py runserver
