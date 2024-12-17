@@ -1,0 +1,3 @@
+This is a test file for the FinalProject_stock in the PYTHON course.
+You can use this file to write and test your code for the project.
+Good luck with your project!
