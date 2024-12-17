@@ -51,10 +51,40 @@ FinalProject_stock/
 
 ---
 
+
+### `stock_st_init.py` Streamlit Configuration File
+
+```markdown
+'''
+project/
+├── components/
+│   ├── __init__.py
+│   ├── data_processing.py
+│   ├── models.py
+│   ├── visualization.py
+│   └── utils.py
+├── requirements.txt
+└── main.py
+'''
+
+```
+
+---
+
 ### Running the Django Development Server
 
 ```bash
 python manage.py runserver
 ```
+
+---
+
+Running the Streamlit Development Server
+
+```bash
+streamlit run stock_st_init.py
+```
+
+![圖片描述](https://raw.githubusercontent.com/raytan0715/FinalProject_Stock/main/%E6%88%AA%E5%9C%96%202024-12-17%20%E4%B8%8B%E5%8D%883.04.13.png)
 
 ---
